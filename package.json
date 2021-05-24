@@ -1,0 +1,26 @@
+{
+  "name": "E-Voting-using-smart-contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrithick116/E-Voting-using-smart-contracts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrithick116/E-Voting-using-smart-contracts/issues"
+  },
+  "homepage": "https://github.com/rrithick116/E-Voting-using-smart-contracts#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
