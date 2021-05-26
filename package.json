@@ -1,26 +1,25 @@
 {
-  "name": "E-Voting-using-smart-contracts",
+  "name": "eth-todo-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "Blockchain Todo List Powered By Ethereum",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && sexit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rrithick116/E-Voting-using-smart-contracts.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "gregory@dappuniversity.com",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rrithick116/E-Voting-using-smart-contracts/issues"
-  },
-  "homepage": "https://github.com/rrithick116/E-Voting-using-smart-contracts#readme",
-  "dependencies": {
-    "nodemon": "^2.0.7"
+  "devDependencies": {
+    "bootstrap": "4.1.3",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "lite-server": "^2.3.0",
+    "nodemon": "^1.17.3",
+    "truffle": "5.0.2",
+    "truffle-contract": "3.0.6"
   }
 }

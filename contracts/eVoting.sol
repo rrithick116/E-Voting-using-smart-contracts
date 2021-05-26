@@ -10,11 +10,11 @@ contract eVoting{
         uint voteCount;
     }
 
-    mapping(uint => Candidate) public Candidates;
-
     constructor() public{
         createCandidate("Roshan Bhatt");
     }
+
+    mapping(uint => Candidate) public Candidates;
 
     function createCandidate(string memory _name) public{
         candidateCount ++;

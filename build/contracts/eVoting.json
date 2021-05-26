@@ -84,12 +84,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"Candidates\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"candidateCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"createCandidate\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalVoteCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/VIT CSE Academics/Third Semester/Blockchain and Cryptocyrrency/DA2/E-Voting-using-smart-contracts/contracts/eVoting.sol\":\"eVoting\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/VIT CSE Academics/Third Semester/Blockchain and Cryptocyrrency/DA2/E-Voting-using-smart-contracts/contracts/eVoting.sol\":{\"keccak256\":\"0x130a689ffd4690c5d2a1b11cced1b75784e669bcfbf273a31b84ec71f58ac669\",\"urls\":[\"bzz-raw://dfec4c832309f65cf4f817b6d7cf886f5bf2d8f0bdee73c8375674e9d9619987\",\"dweb:/ipfs/QmQpPZUybBZXcCRFCJLepmT1jXHPLowd8Ri1wgFdHJXonj\"]}},\"version\":1}",
-  "bytecode": "0x608060405260008055600060015534801561001957600080fd5b5060408051808201909152600c81526b149bdcda185b88109a185d1d60a21b602082015261004f906001600160e01b0361005416565b61014c565b600180548101808255604080516060810182528281526020808201868152600083850181905294855260028252929093208151815591518051919492936100a0938501929101906100b1565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100f257805160ff191683800117855561011f565b8280016001018555821561011f579182015b8281111561011f578251825591602001919060010190610104565b5061012b92915061012f565b5090565b61014991905b8082111561012b5760008155600101610135565b90565b6103a28061015b6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063290e9212146100515780635fba7a56146100f4578063893d8f4c1461019c578063a9a981a3146101b6575b600080fd5b61006e6004803603602081101561006757600080fd5b50356101be565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100b757818101518382015260200161009f565b50505050905090810190601f1680156100e45780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b61019a6004803603602081101561010a57600080fd5b81019060208101813564010000000081111561012557600080fd5b82018360208201111561013757600080fd5b8035906020019184600183028401116401000000008311171561015957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610269945050505050565b005b6101a46102c6565b60408051918252519081900360200190f35b6101a46102cc565b60026020818152600092835260409283902080546001808301805487519281161561010002600019011695909504601f81018590048502820185019096528581529094919390929091908301828280156102595780601f1061022e57610100808354040283529160200191610259565b820191906000526020600020905b81548152906001019060200180831161023c57829003601f168201915b5050505050908060020154905083565b600180548101808255604080516060810182528281526020808201868152600083850181905294855260028252929093208151815591518051919492936102b5938501929101906102d2565b506040820151816002015590505050565b60005481565b60015481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031357805160ff1916838001178555610340565b82800160010185558215610340579182015b82811115610340578251825591602001919060010190610325565b5061034c929150610350565b5090565b61036a91905b8082111561034c5760008155600101610356565b9056fea265627a7a723158202b20b6e9acf47079a49e6a6ad6ac0cd64ba2fe9c12579816e4df37e52db6fc8f64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063290e9212146100515780635fba7a56146100f4578063893d8f4c1461019c578063a9a981a3146101b6575b600080fd5b61006e6004803603602081101561006757600080fd5b50356101be565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100b757818101518382015260200161009f565b50505050905090810190601f1680156100e45780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b61019a6004803603602081101561010a57600080fd5b81019060208101813564010000000081111561012557600080fd5b82018360208201111561013757600080fd5b8035906020019184600183028401116401000000008311171561015957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610269945050505050565b005b6101a46102c6565b60408051918252519081900360200190f35b6101a46102cc565b60026020818152600092835260409283902080546001808301805487519281161561010002600019011695909504601f81018590048502820185019096528581529094919390929091908301828280156102595780601f1061022e57610100808354040283529160200191610259565b820191906000526020600020905b81548152906001019060200180831161023c57829003601f168201915b5050505050908060020154905083565b600180548101808255604080516060810182528281526020808201868152600083850181905294855260028252929093208151815591518051919492936102b5938501929101906102d2565b506040820151816002015590505050565b60005481565b60015481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031357805160ff1916838001178555610340565b82800160010185558215610340579182015b82811115610340578251825591602001919060010190610325565b5061034c929150610350565b5090565b61036a91905b8082111561034c5760008155600101610356565b9056fea265627a7a723158202b20b6e9acf47079a49e6a6ad6ac0cd64ba2fe9c12579816e4df37e52db6fc8f64736f6c63430005100032",
-  "sourceMap": "36:491:0:-;;;88:1;59:30;;125:1;96:30;;285:70;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;316:31:0;;;;;;;;;;;;-1:-1:-1;;;316:31:0;;;;;;-1:-1:-1;;;;;316:15:0;:31;:::i;:::-;36:491;;363:161;426:14;:17;;;;;;;483:33;;;;;;;;;;;;;;;;;;426:14;483:33;;;;;;454:26;;;:10;:26;;;;;;:62;;;;;;;;483:33;;454:26;;:62;;;;;;;;;:::i;:::-;;;;;;;;;;;;;363:161;:::o;36:491::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;36:491:0;;;-1:-1:-1;36:491:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "36:491:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:491:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;232:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;232:44:0;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;232:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;363:161;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;363:161:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;363:161:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;363:161:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;363:161:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;363:161:0;;-1:-1:-1;363:161:0;;-1:-1:-1;;;;;363:161:0:i;:::-;;59:30;;;:::i;:::-;;;;;;;;;;;;;;;;96;;;:::i;232:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;232:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;363:161::-;426:14;:17;;;;;;;483:33;;;;;;;;;;;;;;;;;;426:14;483:33;;;;;;454:26;;;:10;:26;;;;;;:62;;;;;;;;483:33;;454:26;;:62;;;;;;;;;:::i;:::-;;;;;;;;;;;;;363:161;:::o;59:30::-;;;;:::o;96:::-;;;;:::o;36:491::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;36:491:0;;;-1:-1:-1;36:491:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract eVoting{\r\n    uint public totalVoteCount = 0;\r\n    uint public candidateCount = 0;\r\n\r\n    struct Candidate{\r\n        uint id;\r\n        string name;\r\n        uint voteCount;\r\n    }\r\n\r\n    mapping(uint => Candidate) public Candidates;\r\n\r\n    constructor() public{\r\n        createCandidate(\"Roshan Bhatt\");\r\n    }\r\n\r\n    function createCandidate(string memory _name) public{\r\n        candidateCount ++;\r\n        Candidates[candidateCount] = Candidate(candidateCount,_name,0);\r\n    }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"Candidates\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"voteCount\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"candidateCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"createCandidate\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalVoteCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/D/VIT CSE Academics/Third Semester/Blockchain and Cryptocyrrency/DA2/E-Voting-using-smart-contracts/contracts/eVoting.sol\":\"eVoting\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/VIT CSE Academics/Third Semester/Blockchain and Cryptocyrrency/DA2/E-Voting-using-smart-contracts/contracts/eVoting.sol\":{\"keccak256\":\"0x0c4ed908581fd6bf459bceea7432e626ce8d6c26062d3176e81bd41cb359a1a6\",\"urls\":[\"bzz-raw://475f2642a14d5a3bb0c3b2c42af21d707b3f8da00c4ea01fc48f3b8f27180447\",\"dweb:/ipfs/QmXGHqRsBEbDeMjKvVPxxjc3xBo2jTsjVnmce6Js9EPG5K\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008055600060015534801561001957600080fd5b5060408051808201909152600c81526b149bdcda185b88109a185d1d60a21b602082015261004f906001600160e01b0361005416565b61014c565b600180548101808255604080516060810182528281526020808201868152600083850181905294855260028252929093208151815591518051919492936100a0938501929101906100b1565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100f257805160ff191683800117855561011f565b8280016001018555821561011f579182015b8281111561011f578251825591602001919060010190610104565b5061012b92915061012f565b5090565b61014991905b8082111561012b5760008155600101610135565b90565b6103a28061015b6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063290e9212146100515780635fba7a56146100f4578063893d8f4c1461019c578063a9a981a3146101b6575b600080fd5b61006e6004803603602081101561006757600080fd5b50356101be565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100b757818101518382015260200161009f565b50505050905090810190601f1680156100e45780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b61019a6004803603602081101561010a57600080fd5b81019060208101813564010000000081111561012557600080fd5b82018360208201111561013757600080fd5b8035906020019184600183028401116401000000008311171561015957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610269945050505050565b005b6101a46102c6565b60408051918252519081900360200190f35b6101a46102cc565b60026020818152600092835260409283902080546001808301805487519281161561010002600019011695909504601f81018590048502820185019096528581529094919390929091908301828280156102595780601f1061022e57610100808354040283529160200191610259565b820191906000526020600020905b81548152906001019060200180831161023c57829003601f168201915b5050505050908060020154905083565b600180548101808255604080516060810182528281526020808201868152600083850181905294855260028252929093208151815591518051919492936102b5938501929101906102d2565b506040820151816002015590505050565b60005481565b60015481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031357805160ff1916838001178555610340565b82800160010185558215610340579182015b82811115610340578251825591602001919060010190610325565b5061034c929150610350565b5090565b61036a91905b8082111561034c5760008155600101610356565b9056fea265627a7a72315820b8f297af1aa49733a143f3a433786c307b27ccdd9ba7a00a101838fc05b65d9964736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063290e9212146100515780635fba7a56146100f4578063893d8f4c1461019c578063a9a981a3146101b6575b600080fd5b61006e6004803603602081101561006757600080fd5b50356101be565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100b757818101518382015260200161009f565b50505050905090810190601f1680156100e45780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b61019a6004803603602081101561010a57600080fd5b81019060208101813564010000000081111561012557600080fd5b82018360208201111561013757600080fd5b8035906020019184600183028401116401000000008311171561015957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610269945050505050565b005b6101a46102c6565b60408051918252519081900360200190f35b6101a46102cc565b60026020818152600092835260409283902080546001808301805487519281161561010002600019011695909504601f81018590048502820185019096528581529094919390929091908301828280156102595780601f1061022e57610100808354040283529160200191610259565b820191906000526020600020905b81548152906001019060200180831161023c57829003601f168201915b5050505050908060020154905083565b600180548101808255604080516060810182528281526020808201868152600083850181905294855260028252929093208151815591518051919492936102b5938501929101906102d2565b506040820151816002015590505050565b60005481565b60015481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031357805160ff1916838001178555610340565b82800160010185558215610340579182015b82811115610340578251825591602001919060010190610325565b5061034c929150610350565b5090565b61036a91905b8082111561034c5760008155600101610356565b9056fea265627a7a72315820b8f297af1aa49733a143f3a433786c307b27ccdd9ba7a00a101838fc05b65d9964736f6c63430005100032",
+  "sourceMap": "36:491:0:-;;;88:1;59:30;;125:1;96:30;;232:70;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;263:31:0;;;;;;;;;;;;-1:-1:-1;;;263:31:0;;;;;;-1:-1:-1;;;;;263:15:0;:31;:::i;:::-;36:491;;363:161;426:14;:17;;;;;;;483:33;;;;;;;;;;;;;;;;;;426:14;483:33;;;;;;454:26;;;:10;:26;;;;;;:62;;;;;;;;483:33;;454:26;;:62;;;;;;;;;:::i;:::-;;;;;;;;;;;;;363:161;:::o;36:491::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;36:491:0;;;-1:-1:-1;36:491:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "36:491:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:491:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;310:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;310:44:0;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;310:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;363:161;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;363:161:0;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;363:161:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;363:161:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;363:161:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;363:161:0;;-1:-1:-1;363:161:0;;-1:-1:-1;;;;;363:161:0:i;:::-;;59:30;;;:::i;:::-;;;;;;;;;;;;;;;;96;;;:::i;310:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;310:44:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;363:161::-;426:14;:17;;;;;;;483:33;;;;;;;;;;;;;;;;;;426:14;483:33;;;;;;454:26;;;:10;:26;;;;;;:62;;;;;;;;483:33;;454:26;;:62;;;;;;;;;:::i;:::-;;;;;;;;;;;;;363:161;:::o;59:30::-;;;;:::o;96:::-;;;;:::o;36:491::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;36:491:0;;;-1:-1:-1;36:491:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract eVoting{\r\n    uint public totalVoteCount = 0;\r\n    uint public candidateCount = 0;\r\n\r\n    struct Candidate{\r\n        uint id;\r\n        string name;\r\n        uint voteCount;\r\n    }\r\n\r\n    constructor() public{\r\n        createCandidate(\"Roshan Bhatt\");\r\n    }\r\n\r\n    mapping(uint => Candidate) public Candidates;\r\n\r\n    function createCandidate(string memory _name) public{\r\n        candidateCount ++;\r\n        Candidates[candidateCount] = Candidate(candidateCount,_name,0);\r\n    }\r\n}",
   "sourcePath": "D:/VIT CSE Academics/Third Semester/Blockchain and Cryptocyrrency/DA2/E-Voting-using-smart-contracts/contracts/eVoting.sol",
   "ast": {
     "absolutePath": "/D/VIT CSE Academics/Third Semester/Blockchain and Cryptocyrrency/DA2/E-Voting-using-smart-contracts/contracts/eVoting.sol",
@@ -304,57 +304,10 @@
             "visibility": "public"
           },
           {
-            "constant": false,
-            "id": 18,
-            "name": "Candidates",
-            "nodeType": "VariableDeclaration",
-            "scope": 46,
-            "src": "232:44:0",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$14_storage_$",
-              "typeString": "mapping(uint256 => struct eVoting.Candidate)"
-            },
-            "typeName": {
-              "id": 17,
-              "keyType": {
-                "id": 15,
-                "name": "uint",
-                "nodeType": "ElementaryTypeName",
-                "src": "240:4:0",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
-                }
-              },
-              "nodeType": "Mapping",
-              "src": "232:26:0",
-              "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$14_storage_$",
-                "typeString": "mapping(uint256 => struct eVoting.Candidate)"
-              },
-              "valueType": {
-                "contractScope": null,
-                "id": 16,
-                "name": "Candidate",
-                "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 14,
-                "src": "248:9:0",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Candidate_$14_storage_ptr",
-                  "typeString": "struct eVoting.Candidate"
-                }
-              }
-            },
-            "value": null,
-            "visibility": "public"
-          },
-          {
             "body": {
-              "id": 25,
+              "id": 21,
               "nodeType": "Block",
-              "src": "305:50:0",
+              "src": "252:50:0",
               "statements": [
                 {
                   "expression": {
@@ -363,14 +316,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "526f7368616e204268617474",
-                        "id": 22,
+                        "id": 18,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "332:14:0",
+                        "src": "279:14:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_5e7bec0f0217e517af4cb13d10935b248446eb1a88418528c97d925eef7940ea",
@@ -386,18 +339,18 @@
                           "typeString": "literal_string \"Roshan Bhatt\""
                         }
                       ],
-                      "id": 21,
+                      "id": 17,
                       "name": "createCandidate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 45,
-                      "src": "316:15:0",
+                      "src": "263:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory)"
                       }
                     },
-                    "id": 23,
+                    "id": 19,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -405,41 +358,88 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "316:31:0",
+                    "src": "263:31:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 24,
+                  "id": 20,
                   "nodeType": "ExpressionStatement",
-                  "src": "316:31:0"
+                  "src": "263:31:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 26,
+            "id": 22,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 19,
+              "id": 15,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "296:2:0"
+              "src": "243:2:0"
             },
             "returnParameters": {
-              "id": 20,
+              "id": 16,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "305:0:0"
+              "src": "252:0:0"
             },
             "scope": 46,
-            "src": "285:70:0",
+            "src": "232:70:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 26,
+            "name": "Candidates",
+            "nodeType": "VariableDeclaration",
+            "scope": 46,
+            "src": "310:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$14_storage_$",
+              "typeString": "mapping(uint256 => struct eVoting.Candidate)"
+            },
+            "typeName": {
+              "id": 25,
+              "keyType": {
+                "id": 23,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "318:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "310:26:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$14_storage_$",
+                "typeString": "mapping(uint256 => struct eVoting.Candidate)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 24,
+                "name": "Candidate",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 14,
+                "src": "326:9:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Candidate_$14_storage_ptr",
+                  "typeString": "struct eVoting.Candidate"
+                }
+              }
+            },
+            "value": null,
             "visibility": "public"
           },
           {
@@ -498,7 +498,7 @@
                         "name": "Candidates",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 18,
+                        "referencedDeclaration": 26,
                         "src": "454:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$14_storage_$",
@@ -912,53 +912,6 @@
           },
           {
             "attributes": {
-              "constant": false,
-              "name": "Candidates",
-              "scope": 46,
-              "stateVariable": true,
-              "storageLocation": "default",
-              "type": "mapping(uint256 => struct eVoting.Candidate)",
-              "value": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "type": "mapping(uint256 => struct eVoting.Candidate)"
-                },
-                "children": [
-                  {
-                    "attributes": {
-                      "name": "uint",
-                      "type": "uint256"
-                    },
-                    "id": 15,
-                    "name": "ElementaryTypeName",
-                    "src": "240:4:0"
-                  },
-                  {
-                    "attributes": {
-                      "contractScope": null,
-                      "name": "Candidate",
-                      "referencedDeclaration": 14,
-                      "type": "struct eVoting.Candidate"
-                    },
-                    "id": 16,
-                    "name": "UserDefinedTypeName",
-                    "src": "248:9:0"
-                  }
-                ],
-                "id": 17,
-                "name": "Mapping",
-                "src": "232:26:0"
-              }
-            ],
-            "id": 18,
-            "name": "VariableDeclaration",
-            "src": "232:44:0"
-          },
-          {
-            "attributes": {
               "documentation": null,
               "implemented": true,
               "isConstructor": true,
@@ -980,9 +933,9 @@
                   ]
                 },
                 "children": [],
-                "id": 19,
+                "id": 15,
                 "name": "ParameterList",
-                "src": "296:2:0"
+                "src": "243:2:0"
               },
               {
                 "attributes": {
@@ -991,9 +944,9 @@
                   ]
                 },
                 "children": [],
-                "id": 20,
+                "id": 16,
                 "name": "ParameterList",
-                "src": "305:0:0"
+                "src": "252:0:0"
               },
               {
                 "children": [
@@ -1029,9 +982,9 @@
                               "type": "function (string memory)",
                               "value": "createCandidate"
                             },
-                            "id": 21,
+                            "id": 17,
                             "name": "Identifier",
-                            "src": "316:15:0"
+                            "src": "263:15:0"
                           },
                           {
                             "attributes": {
@@ -1046,29 +999,76 @@
                               "type": "literal_string \"Roshan Bhatt\"",
                               "value": "Roshan Bhatt"
                             },
-                            "id": 22,
+                            "id": 18,
                             "name": "Literal",
-                            "src": "332:14:0"
+                            "src": "279:14:0"
                           }
                         ],
-                        "id": 23,
+                        "id": 19,
                         "name": "FunctionCall",
-                        "src": "316:31:0"
+                        "src": "263:31:0"
                       }
                     ],
-                    "id": 24,
+                    "id": 20,
                     "name": "ExpressionStatement",
-                    "src": "316:31:0"
+                    "src": "263:31:0"
+                  }
+                ],
+                "id": 21,
+                "name": "Block",
+                "src": "252:50:0"
+              }
+            ],
+            "id": 22,
+            "name": "FunctionDefinition",
+            "src": "232:70:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "Candidates",
+              "scope": 46,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct eVoting.Candidate)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct eVoting.Candidate)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 23,
+                    "name": "ElementaryTypeName",
+                    "src": "318:4:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Candidate",
+                      "referencedDeclaration": 14,
+                      "type": "struct eVoting.Candidate"
+                    },
+                    "id": 24,
+                    "name": "UserDefinedTypeName",
+                    "src": "326:9:0"
                   }
                 ],
                 "id": 25,
-                "name": "Block",
-                "src": "305:50:0"
+                "name": "Mapping",
+                "src": "310:26:0"
               }
             ],
             "id": 26,
-            "name": "FunctionDefinition",
-            "src": "285:70:0"
+            "name": "VariableDeclaration",
+            "src": "310:44:0"
           },
           {
             "attributes": {
@@ -1199,7 +1199,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 18,
+                                  "referencedDeclaration": 26,
                                   "type": "mapping(uint256 => struct eVoting.Candidate storage ref)",
                                   "value": "Candidates"
                                 },
@@ -1356,12 +1356,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x60C132fa588cb040af35E4D0d0a4932306C08E06",
-      "transactionHash": "0x742d122944121bc59d8a67e370eb8fe0f5b1624928d9f5dd1593893c4b39e6ba"
+      "address": "0xc1524b6E7ddE341E20323e2b63BA095D55a4b502",
+      "transactionHash": "0xfa05aac86a9f4db8a140d4da2f1e17e8fe853510a7c7b4932e3572c42ace6b53"
     }
   },
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-05-24T16:37:09.702Z",
+  "updatedAt": "2021-05-24T17:45:34.515Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
