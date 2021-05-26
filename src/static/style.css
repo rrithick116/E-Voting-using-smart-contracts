@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+/* For All */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+input::placeholder{
+    font-weight: normal;
+    color: rgb(26, 25, 25);
+}
+
+input{
+    outline:none;
+}
+
+.center-box{
+    background: rgb(248, 247, 246);
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.center-box img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #eee;
+}
+
+/* For index.html */
+
+.first-time{
+    width: 800px;
+    height: 400px;  
+    display: grid;
+    grid-template-rows: 50% 25% 25%;
+    grid-row-gap: 10px;
+    padding: 60px 50px;
+    font-weight: bold;
+}
+
+.user{
+    height: 50px;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(250, 78, 78);
+}
+
+.admin{
+    height: 50px;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(108, 108, 253);
+}
+
+.user:hover{
+    background-color: rgba(250, 78, 78, 0.733);
+}
+
+.admin:hover{
+    background-color: rgba(108, 108, 253, 0.733);
+}
+
+/* For userlogin.html */
+
+.user-login{
+    width: 800px;
+    height: 600px;  
+    padding: 25px 60px 50px;
+    display: grid;
+    grid-template-rows: 40% 20% 20% 10% 10%;
+    grid-row-gap: 5px;
+    font-weight: bold;
+}
+
+.user-login label{
+    font-weight: bold;
+}
+
+.user-login input[type="text"], .user-login input[type="password"]{
+    width: 100%;
+    height:40px;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+}
+
+
+.user-login input[type="submit"]{
+    height: 50px;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(250, 78, 78);
+}
+
+.user-login input[type="submit"]:hover{
+    background-color: rgba(250, 78, 78, 0.733);
+}
+
+.user-login a{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.user-login a:hover{
+    font-size: 20px;
+    color: rgb(250, 78, 78);
+}
+
