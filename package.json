@@ -21,5 +21,9 @@
     "nodemon": "^1.17.3",
     "truffle": "5.0.2",
     "truffle-contract": "3.0.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
   }
 }
