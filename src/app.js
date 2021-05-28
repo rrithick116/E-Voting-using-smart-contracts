@@ -8,8 +8,6 @@ App = {
     return App.loadWeb3();
   },
 
-
-
  loadWeb3: async () => {
       if (typeof web3 !== 'undefined') {
         App.web3Provider = web3.currentProvider
@@ -142,7 +140,6 @@ App = {
   endElection: function(){
     console.log("ending  election");
   }
-
 };
 
 $(function() {
@@ -150,3 +147,4 @@ $(function() {
     App.init();
   });
 });
+

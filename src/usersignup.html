@@ -10,28 +10,19 @@
 <body>
     <div class="center-box user-signup">
         <img src="static/logo.png" alt="logo">
-        <div>
-            <label for="full name">Full Name</label>
-            <br>
-            <input type="text" placeholder="Enter Full Name">
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <br>
-            <input type="email" placeholder="Enter Email">
-        </div>
-        <div>
-            <label for="password1">Password</label>
-            <br>
-            <input type="password" placeholder="Enter Password">
-        </div>
-        <div>
-            <label for="password2">Password</label>
-            <br>
-            <input type="password" placeholder="Confirm Password">
-        </div>
-        <input type="submit" value="Register" class="btn">
-        <a href="userlogin.html">Already have an account?</a>
+        <form onSubmit="userSignup(); return false;" class="user-signup-form">
+            <div>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" placeholder="Enter Email" id = "email">
+            </div>
+            <div>
+                <label for="publicKey">Public Key</label>
+                <br>
+                <input type="text" placeholder="Enter Public Key" id = "publicKey">
+            </div>
+            <input type="submit" value="Register" class="btn" id="submit">
+        </form>
     </div>
 </body>
 </html>
