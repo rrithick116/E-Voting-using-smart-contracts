@@ -9,12 +9,23 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
     <title>e-voting</title>
+
+    <style>
+      .bttn{
+        float:right;
+        margin: 1rem 1rem;
+      }
+    </style>
   </head>
   <body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <button type="button" class="btn btn-danger bttn" onclick="location.href='index.html'">Logout</button>
+    </nav>
+
     <div class="container" style="width: 650px">
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="text-center">Election Results</h1>
+          <h1 class="text-center">Select Your Candidate</h1>
           <hr />
           <br />
           <div id="loader">
@@ -41,13 +52,13 @@
                 <hr />
               </form>
             <p id="accountAddress" class="text-center"></p>
+            <h1 id="announcement" class="text-center"></h1>
           </div>
         </div>
       </div>
     </div>
 
-    <h1 id="announcement"></h1>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/web3.min.js"></script>
