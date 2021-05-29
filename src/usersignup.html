@@ -10,16 +10,16 @@
 <body>
     <div class="center-box user-signup">
         <img src="static/logo.png" alt="logo">
-        <form onSubmit="userSignup(); return false;" class="user-signup-form">
+        <form action="/signup" method="POST" class="user-signup-form">
             <div>
                 <label for="email">Email</label>
                 <br>
-                <input type="email" placeholder="Enter Email" id = "email">
+                <input type="email" name="email" placeholder="Enter Email" id = "email">
             </div>
             <div>
                 <label for="publicKey">Public Key</label>
                 <br>
-                <input type="text" placeholder="Enter Public Key" id = "publicKey">
+                <input type="text" name="publicKey" placeholder="Enter Public Key" id = "publicKey">
             </div>
             <input type="submit" value="Register" class="btn" id="submit">
         </form>

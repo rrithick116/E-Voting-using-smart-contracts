@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>EmailVerification</title>
+</head>
+<body>
+    <div class="center-box user-verification">
+        <h1>Email Verification</h1>
+        <h3 id="wrong_otp"></h3>
+        <form action="/otp" method="POST" class="user-verification-form">
+            <label for="OTP">OTP</label>
+            <input type="password" name="OTP" id="OTP">
+            <input type="submit" onClick="wrong_message()" value="Enter" class="btn" id="submit">
+        </form>
+    </div>
+</body>
+<script src="./static/script.js"></script>
+</html>
