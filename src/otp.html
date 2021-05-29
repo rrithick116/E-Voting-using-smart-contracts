@@ -8,16 +8,15 @@
     <title>EmailVerification</title>
 </head>
 <body>
-    <div class="center-box user-signup">
-        <img src="static/logo.png" alt="logo">
-        <form action="/signup" method="POST" class="user-signup-form">
-            <div>
-                <label for="OTP">Enter OTP</label>
-                <br>
-                <input type="text" name="OTP" placeholder="Enter OTP" id = "OTP">
-            </div>
-            <input type="submit" value="Enter" class="btn" id="submit">
+    <div class="center-box user-verification">
+        <h1>Email Verification</h1>
+        <h3 id="wrong_otp"></h3>
+        <form action="/otp" method="POST" class="user-verification-form">
+            <label for="OTP">OTP</label>
+            <input type="password" name="OTP" id="OTP">
+            <input type="submit" onClick="wrong_message()" value="Enter" class="btn" id="submit">
         </form>
     </div>
 </body>
+<script src="./static/script.js"></script>
 </html>

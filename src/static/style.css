@@ -66,7 +66,9 @@ input{
 }
 
 .user-btn,
-.user-signup input[type="submit"]{
+.user-signup input[type="submit"],
+.user-verification-form input[type="submit"]
+{
     height: 50px;
     width: 500px;
     margin: auto;
@@ -81,7 +83,9 @@ input{
 }
 
 .user-btn:hover, 
-.user-signup input[type="submit"]:hover{
+.user-signup input[type="submit"]:hover,
+.user-verification-form input[type="submit"]:hover
+{
     background-color: rgba(250, 78, 78, 0.733);
 }
 
@@ -112,6 +116,8 @@ input{
     font-weight: bold;
 }
 
+
+.user-verification-form,
 .user-signup-form{
     display: grid;
     grid-template-rows: 33% 33% 33%;
@@ -119,10 +125,7 @@ input{
     font-weight: bold;
 }
 
-.user-signup label{
-    font-weight: bold;
-}
-
+.user-verification-form input[type="password"],
 .user-signup input[type="email"], 
 .user-signup input[type="text"]{
     width: 100%;
@@ -141,3 +144,39 @@ input{
     margin-top: 0;
 }
 
+/* For otp.html */
+
+.user-verification{
+    width: 800px;
+    height: 350px;
+    padding: 25px 60px 25px;
+    display: grid;
+    grid-template-rows: 30% 10% 60%;
+    font-weight: bold;
+}
+
+.user-verification h1
+{
+    text-align: center;
+    line-height: 100px;
+}
+
+.user-verification-form label
+{
+    text-align: center;
+    line-height: 50px;
+}
+
+.user-verification-form input[type="password"]{
+    width: 50%;
+    margin: auto;
+}
+
+.user-verification-form input[type="submit"]{
+    width: 50%;
+}
+
+#wrong_otp{
+    margin: auto;
+    color: red;
+}
