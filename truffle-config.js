@@ -37,7 +37,6 @@ app.post("/signup", async (req, res)=>{
 
 app.post("/otp", async (req, res)=>{
   const input_otp = parseInt(req.body.OTP);
-
   if(input_otp===generated_otp){
     await db.insert({publicKey}, ()=>{
       console.log("success");
