@@ -20,17 +20,40 @@
         font-size:x-large;
         margin-top: 30rem;
     }
+      .bttn{
+        float:right;
+        margin: 1rem 1rem;
+      }
+
+      .home{
+        font-size: 3rem;
+        float:left;
+        margin: 1rem 1rem;
+      }
+
 </style>
-
-
-
 
 </head>
 <body>
     
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <a class="nav-link home" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+        <button type="button" class="btn btn-danger bttn" onclick="location.href='index.html'">Logout</button>
+      </nav>
 
+      <form class="form-inline"></form>
+      <label>Add Candidate</label>
+        <div class="form-group mx-sm-3 mb-2">
+          <input type="text" class="form-control" id="candidatename" placeholder="name">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" onclick="App.addCandid()">Add</button>
+      </form>
 
+    
+    <br><br>
     <button type="button" class="btn end btn-danger" onclick="App.endElection()">End Election</button>
+        
+   
 
 
 
