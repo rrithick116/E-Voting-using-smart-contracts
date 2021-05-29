@@ -96,7 +96,7 @@ App = {
       var candidatesSelect = $('#candidatesSelect');
       candidatesSelect.empty();
 
-      for (var i = 1; i <= candidatesCount; i++) {
+      for (var i = 0; i <= candidatesCount; i++) {
         electionInstance.candidates(i).then(function(candidate) {
           var id = candidate[0];
           var name = candidate[1];
@@ -111,17 +111,19 @@ App = {
           candidatesSelect.append(candidateOption);
         });
       }
-      return electionInstance.voters(App.account)[0];
-    }).then(function(hasVoted) {
-      // Do not allow a user to vote
-      if(hasVoted) {
-        $('form').hide();
-      }
-      loader.hide();
-      content.show();
-    }).catch(function(error) {
-      console.warn(error);
-    });
+      electionInstance.voters(App.account).then(function(voted){
+        return voted[0];
+      }).then(function(hasVoted) {
+        // Do not allow a user to vote
+        if(hasVoted) {
+          $('form').hide();
+        }
+        loader.hide();
+        content.show();
+      }).catch(function(error) {
+        console.warn(error);
+      });
+    })
   },
 
   castVote: function() {
@@ -139,7 +141,56 @@ App = {
 
   endElection: function(){
     console.log("ending  election");
+    App.contracts.eVoting.deployed().then(function(instance){
+      return instance.owner();
+    }).then(function(result){
+      if(App.account==result){
+        App.contracts.eVoting.deployed().then(function(instance){
+          instance.end();
+          window.location.href = "homepage.html"
+        })
+      }
+    })
+    
+    
+  },
+
+
+  // endElection: function(){
+  //   console.log("ending  election");
+  //   App.contracts.eVoting.deployed().then(function(instance){
+  //     return instance.owner();
+  //   }).then(function(result){
+  //     if(App.account==result){
+  //       console.log("same");
+  //       window.location.href="homepage.html";
+  //     }
+  //     else
+  //       alert("Yoy are not admin!!");
+  //   })
+  // },
+
+  adminCheck:function(){
+    console.log("inside admin");
+    App.contracts.eVoting.deployed().then(function(instance){
+      return instance.owner();
+    }).then(function(result){
+      if(App.account==result)
+         window.location.href = "admin.html";
+      else
+         window.location.href = "adminlogin.html";
+    })
+  },
+
+  addCandid:function(){
+    console.log("inside add candid function");
+    var name =document.getElementById("candidatename").value;
+    App.contracts.eVoting.deployed().then(function(instance){
+      instance.addCandidate(name,{ from: App.account } )
+    })
   }
+
+
 };
 
 $(function() {

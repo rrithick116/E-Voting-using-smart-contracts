@@ -17,6 +17,7 @@ contract eVoting{
     address payable public owner;
     string public electionName;
     uint public noOfCandidates;
+    bool public electionStatus=true;
     
     mapping(address=>Voter) public voters;
     Candidate[] public candidates;
@@ -55,6 +56,7 @@ contract eVoting{
     
     function vote(uint _voteIndex) public{
         require(!voters[msg.sender].voted);
+        if(electionStatus){
         //require(voters[msg.sender].authorized);
         
         voters[msg.sender].vote=_voteIndex;
@@ -64,10 +66,12 @@ contract eVoting{
         totalVotes+=1;
         
         emit votedEvent(_voteIndex);
+        }
         
     }
     
     function end() public ownerOnly{
+        electionStatus=false;
         selfdestruct(owner);
     }
 }
