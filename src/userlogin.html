@@ -10,7 +10,7 @@
 <body>
     <div class="center-box user-login">
         <img src="static/logo.png" alt="logo">
-        <button class = "btn user-btn" onclick="location.href='homepage.html';">
+        <button class = "btn user-btn" onclick="App.verifyVoter()">
             VOTE
         </button>
         <button class = "btn user-btn" onclick="location.href='usersignup.html';">
@@ -18,4 +18,9 @@
         </button>
     </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+<script src="app.js"></script>
 </html>

@@ -170,6 +170,7 @@ input{
 .user-verification-form input[type="password"]{
     width: 50%;
     margin: auto;
+    font-size: larger;
 }
 
 .user-verification-form input[type="submit"]{

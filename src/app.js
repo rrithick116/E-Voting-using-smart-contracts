@@ -150,9 +150,7 @@ App = {
           window.location.href = "homepage.html"
         })
       }
-    })
-    
-    
+    }) 
   },
 
 
@@ -188,8 +186,39 @@ App = {
     App.contracts.eVoting.deployed().then(function(instance){
       instance.addCandidate(name,{ from: App.account } )
     })
-  }
+  },
 
+  getAccounts: function(callback) {
+    web3.eth.getAccounts((error,result) => {
+        if (error) {
+            console.log(error);
+        } else {
+            callback(result);
+        }
+    });
+  },
+
+  verifyVoter: async function(){
+    const current_account = App.account;
+    const data = {current_account};
+
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data),
+    };
+
+    const res = await fetch("/verify", options);
+    const res_json = await res.json();
+    if(res_json.status === 'success'){
+      window.location.href = "homepage.html";
+    }
+    else if (res_json.status === 'fail'){
+      window.location.href = "adminlogin.html";
+    }
+  }
 
 };
 
