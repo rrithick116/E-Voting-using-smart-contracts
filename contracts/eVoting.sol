@@ -17,8 +17,18 @@ contract eVoting{
     address payable public owner;
     string public electionName;
     uint public noOfCandidates;
-    bool public electionStatus=true;
+    //bool public electionStatus=true;
+    enum STATUS{INACTIVE,ACTIVE,ENDED}
+    STATUS status=STATUS.INACTIVE;
     
+    function electionStatus() public view returns(STATUS){
+        return status;
+    }
+    
+    function startElection() public{
+        status=STATUS.ACTIVE;
+    }
+
     mapping(address=>Voter) public voters;
     Candidate[] public candidates;
     
@@ -42,6 +52,7 @@ contract eVoting{
     }
     
     function addCandidate(string memory _name)ownerOnly public{
+        require(status==STATUS.INACTIVE,"Election has already begun.");
         noOfCandidates++;
         candidates.push(Candidate(noOfCandidates,_name,0));
     }
@@ -55,8 +66,9 @@ contract eVoting{
     // }
     
     function vote(uint _voteIndex) public{
-        require(!voters[msg.sender].voted);
-        if(electionStatus){
+        require(!voters[msg.sender].voted,"Already voted");
+        require(status==STATUS.ACTIVE,"Election has not yet started/already ended.");
+     
         //require(voters[msg.sender].authorized);
         
         voters[msg.sender].vote=_voteIndex;
@@ -66,12 +78,11 @@ contract eVoting{
         totalVotes+=1;
         
         emit votedEvent(_voteIndex);
-        }
-        
     }
-    
-    function end() public ownerOnly{
-        electionStatus=false;
-        selfdestruct(owner);
+    function end(address a) public ownerOnly{
+        require(status==STATUS.ACTIVE,"Election has not yet begun");
+        status=STATUS.ENDED;
+        // electionStatus=false;
+        // selfdestruct(owner);
     }
 }

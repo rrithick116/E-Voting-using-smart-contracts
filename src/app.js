@@ -85,45 +85,63 @@ App = {
       }
     });
 
+
     // Load contract data
-    App.contracts.eVoting.deployed().then(function(instance) {
-      electionInstance = instance;
-      return electionInstance.noOfCandidates();
-    }).then(function(candidatesCount) {
-      var candidatesResults = $("#candidatesResults");
-      candidatesResults.empty();
-
-      var candidatesSelect = $('#candidatesSelect');
-      candidatesSelect.empty();
-
-      for (var i = 0; i <= candidatesCount; i++) {
-        electionInstance.candidates(i).then(function(candidate) {
-          var id = candidate[0];
-          var name = candidate[1];
-          var voteCount = candidate[2];
-
-          // Render candidate Result
-          var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
-          candidatesResults.append(candidateTemplate);
-
-          // Render candidate ballot option
-          var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
-          candidatesSelect.append(candidateOption);
-        });
-      }
-      electionInstance.voters(App.account).then(function(voted){
-        return voted[0];
-      }).then(function(hasVoted) {
-        // Do not allow a user to vote
-        if(hasVoted) {
-          $('form').hide();
+     App.contracts.eVoting.deployed().then(function(instance){
+    return instance.electionStatus()
+  }).then(function(i){
+    if(i==0){
+      console.log("election not started");
+      $('#announcement').html("Election not yet started.")
+    }
+    else if(i==1||i==2){
+      console.log("election started");
+      $('#announcement').html("Vote For Change👆");
+      App.contracts.eVoting.deployed().then(function(instance) {
+        electionInstance = instance;
+        return electionInstance.noOfCandidates();
+      }).then(function(candidatesCount) {
+        var candidatesResults = $("#candidatesResults");
+        candidatesResults.empty();
+  
+        var candidatesSelect = $('#candidatesSelect');
+        candidatesSelect.empty();
+  
+        for (var i = 0; i <= candidatesCount; i++) {
+          electionInstance.candidates(i).then(function(candidate) {
+            var id = candidate[0];
+            var name = candidate[1];
+            var voteCount = candidate[2];
+  
+            // Render candidate Result
+            var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
+            candidatesResults.append(candidateTemplate);
+  
+            // Render candidate ballot option
+            var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
+            candidatesSelect.append(candidateOption);
+          });
         }
-        loader.hide();
-        content.show();
-      }).catch(function(error) {
-        console.warn(error);
-      });
-    })
+        electionInstance.voters(App.account).then(function(voted){
+          return voted[0];
+        }).then(function(hasVoted) {
+          // Do not allow a user to vote
+          if(hasVoted) {
+            $('form').hide();
+          }
+          loader.hide();
+          content.show();
+        }).catch(function(error) {
+          console.warn(error);
+        });
+      })
+      if(i==2){
+        console.log("election ended");
+        $('#announcement').html("Election has ended");
+        $('#voteform').hide();
+      }
+    }
+  })
   },
 
   castVote: function() {
@@ -139,6 +157,28 @@ App = {
     });
   },
 
+  // endElection: function(){
+  //   console.log("ending  election");
+  //   App.contracts.eVoting.deployed().then(function(instance){
+  //     return instance.owner();
+  //   }).then(function(result){
+  //     if(App.account==result){
+  //       App.contracts.eVoting.deployed().then(function(instance){
+  //         instance.end();
+  //         window.location.href = "homepage.html"
+  //       })
+  //     }
+  //   })
+    
+    
+  // },
+
+  startElect:function(){
+    console.log("inside start election function");
+    App.contracts.eVoting.deployed().then(function(instance){
+      instance.startElection({ from: App.account });
+    })
+  },  
   endElection: function(){
     console.log("ending  election");
     App.contracts.eVoting.deployed().then(function(instance){
@@ -146,27 +186,16 @@ App = {
     }).then(function(result){
       if(App.account==result){
         App.contracts.eVoting.deployed().then(function(instance){
-          instance.end();
-          window.location.href = "homepage.html"
+        console.log("same");
+        $("#voteform").hide();
+        instance.end(App.account, { from: App.account });
+        console.log("Successfully ended the election");
         })
       }
-    }) 
+      else
+        alert("Yoy are not admin!!");
+    })
   },
-
-
-  // endElection: function(){
-  //   console.log("ending  election");
-  //   App.contracts.eVoting.deployed().then(function(instance){
-  //     return instance.owner();
-  //   }).then(function(result){
-  //     if(App.account==result){
-  //       console.log("same");
-  //       window.location.href="homepage.html";
-  //     }
-  //     else
-  //       alert("Yoy are not admin!!");
-  //   })
-  // },
 
   adminCheck:function(){
     console.log("inside admin");
@@ -227,4 +256,3 @@ $(function() {
     App.init();
   });
 });
-
