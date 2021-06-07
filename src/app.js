@@ -107,8 +107,8 @@ App = {
         var candidatesSelect = $('#candidatesSelect');
         candidatesSelect.empty();
   
-        for (var i = 0; i <= candidatesCount; i++) {
-          electionInstance.candidates(i).then(function(candidate) {
+        for (var j = 0; j <= candidatesCount; j++) {
+          electionInstance.candidates(j).then(function(candidate) {
             var id = candidate[0];
             var name = candidate[1];
             var voteCount = candidate[2];
@@ -217,15 +217,15 @@ App = {
     })
   },
 
-  getAccounts: function(callback) {
-    web3.eth.getAccounts((error,result) => {
-        if (error) {
-            console.log(error);
-        } else {
-            callback(result);
-        }
-    });
-  },
+  // getAccounts: function(callback) {
+  //   web3.eth.getAccounts((error,result) => {
+  //       if (error) {
+  //           console.log(error);
+  //       } else {
+  //           callback(result);
+  //       }
+  //   });
+  // },
 
   verifyVoter: async function(){
     const current_account = App.account;
